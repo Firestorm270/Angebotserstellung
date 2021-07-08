@@ -21,11 +21,27 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TableComponent } from './table/table.component';
+import { SearchbarComponent } from './shared/searchbar/searchbar.component';
+import { CreateOfferComponent } from './create-offer/create-offer.component';
+import { HintsComponent } from './hints/hints.component';
+import { ParticipantsComponent } from './participants/participants.component';
+import { StartSituationComponent } from './start-situation/start-situation.component';
+import { ProjectGoalComponent } from './project-goal/project-goal.component';
+import { ConditionsComponent } from './conditions/conditions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableComponent,
+    SearchbarComponent,
+    CreateOfferComponent,
+    HintsComponent,
+    ParticipantsComponent,
+    StartSituationComponent,
+    ProjectGoalComponent,
+    ConditionsComponent
   ],
   imports: [
     BrowserModule,

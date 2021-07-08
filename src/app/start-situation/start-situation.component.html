@@ -1,0 +1,31 @@
+
+  <app-hints></app-hints>
+
+  <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Wichtige Textbausteine</mat-label>
+    <mat-chip-list #chipList aria-label="Textbaustein eingeben">
+      <mat-chip
+        *ngFor="let Textbaustein of textbausteine"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(Textbaustein)">
+        {{Textbaustein}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input
+        placeholder="Neuer Textbaustein..."
+
+        [formControl]="TextbausteinCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let Textbaustein of textbausteine | async" [value]="textbausteine">
+        {{Textbaustein}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+

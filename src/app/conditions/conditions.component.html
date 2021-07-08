@@ -1,0 +1,64 @@
+<h1>Konditionen</h1>
+
+<p>Einsatzbeginn: </p>
+
+<mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+<p>Einsatzende:</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>dd.mm.yyyy</mat-label>
+    <input matInput placeholder="z.B. 01.01.2022">
+  </mat-form-field>
+</form>
+
+<p>Einsatzort beim Kunden:</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Ort (des Kunden)</mat-label>
+    <input matInput placeholder="z.B. Düsseldorf">
+  </mat-form-field>
+</form>
+
+<p>Arbeitsumfang: </p>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Anzahl der Projekttage</mat-label>
+    <input matInput placeholder="z.B. 7">
+  </mat-form-field>
+</form>
+
+
+<p>Vergütung:</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>€ pro Leistungsstunde (zzgl. MwSt.)</mat-label>
+    <input matInput placeholder="z.B. 39€">
+  </mat-form-field>
+</form>
+
+<p>Nebenkosten für Einsatzorte:</p>
+<p>In Vergütung enthalten</p>
+<mat-checkbox class="example-margin">fallen zusätzlich an</mat-checkbox>
+
+
+<p>Gültigkeitsdatum des Angebots: </p>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>dd.mm.yyyy</mat-label>
+    <input matInput placeholder="z.B. 01.01.2021">
+  </mat-form-field>
+</form>
+
+
+<p style="text-align: center">Geltende AGBs: </p>>
+#Switch
+
+
+
