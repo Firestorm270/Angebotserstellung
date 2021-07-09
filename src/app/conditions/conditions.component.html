@@ -1,6 +1,6 @@
 <h1>Konditionen</h1>
 
-<p>Einsatzbeginn: </p>
+<p style="text-decoration: underline">Einsatzbeginn: </p>
 
 <mat-form-field appearance="fill">
   <mat-label>Choose a date</mat-label>
@@ -10,15 +10,16 @@
 </mat-form-field>
 
 
-<p>Einsatzende:</p>
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>dd.mm.yyyy</mat-label>
-    <input matInput placeholder="z.B. 01.01.2022">
-  </mat-form-field>
-</form>
+<p style="text-decoration: underline">Einsatzende:</p>
 
-<p>Einsatzort beim Kunden:</p>
+<mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<p style="text-decoration: underline">Einsatzort beim Kunden:</p>
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Ort (des Kunden)</mat-label>
@@ -26,7 +27,7 @@
   </mat-form-field>
 </form>
 
-<p>Arbeitsumfang: </p>
+<p style="text-decoration: underline">Arbeitsumfang: </p>
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Anzahl der Projekttage</mat-label>
@@ -35,7 +36,7 @@
 </form>
 
 
-<p>Vergütung:</p>
+<p style="text-decoration: underline">Vergütung:</p>
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>€ pro Leistungsstunde (zzgl. MwSt.)</mat-label>
@@ -43,22 +44,29 @@
   </mat-form-field>
 </form>
 
-<p>Nebenkosten für Einsatzorte:</p>
-<p>In Vergütung enthalten</p>
+<p style="text-decoration: underline">Nebenkosten für Einsatzorte:</p>
+<mat-checkbox class="example-margin">In Vergütung enthalten</mat-checkbox>
+<br>
 <mat-checkbox class="example-margin">fallen zusätzlich an</mat-checkbox>
 
+<br>
 
-<p>Gültigkeitsdatum des Angebots: </p>
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>dd.mm.yyyy</mat-label>
-    <input matInput placeholder="z.B. 01.01.2021">
-  </mat-form-field>
-</form>
+<p style="text-decoration: underline">Gültigkeitsdatum des Angebots: </p>
 
-
-<p style="text-align: center">Geltende AGBs: </p>>
-#Switch
+<mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
 
 
+<p style="text-decoration: underline">Geltende AGBs: </p>
 
+<mat-checkbox class="example-margin">Dienstvertrag</mat-checkbox>
+<br>
+<mat-checkbox class="example-margin">Werkvertrag</mat-checkbox>
+
+<br>
+
+<app-buttons></app-buttons>

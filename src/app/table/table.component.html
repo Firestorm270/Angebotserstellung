@@ -1,4 +1,5 @@
 <app-searchbar></app-searchbar>
+
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 
@@ -34,13 +35,5 @@
 
   <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 
-  <button mat-fab color="warn" aria-label="X">
-    <mat-icon>X</mat-icon>
-  </button>
-  <button mat-fab color="accent" aria-label="Download">
-    Dwnlod
-  </button>
-  <button mat-fab color="primary" aria-label="Save">
-    Save
-  </button>
+  <app-buttons></app-buttons>
 </div>

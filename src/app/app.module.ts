@@ -29,6 +29,11 @@ import { ParticipantsComponent } from './participants/participants.component';
 import { StartSituationComponent } from './start-situation/start-situation.component';
 import { ProjectGoalComponent } from './project-goal/project-goal.component';
 import { ConditionsComponent } from './conditions/conditions.component';
+import { ManageTextBricksComponent } from './manage-text-bricks/manage-text-bricks.component';
+import { ButtonsComponent } from './buttons/buttons.component';
+import {MatSortModule} from "@angular/material/sort";
+import { EndTagQuestionsComponent } from './end-tag-questions/end-tag-questions.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -41,30 +46,35 @@ import { ConditionsComponent } from './conditions/conditions.component';
     ParticipantsComponent,
     StartSituationComponent,
     ProjectGoalComponent,
-    ConditionsComponent
+    ConditionsComponent,
+    ManageTextBricksComponent,
+    ButtonsComponent,
+    EndTagQuestionsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatExpansionModule,
-    NoopAnimationsModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    MatButtonModule,
-    MatInputModule,
-    MatTabsModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatChipsModule,
-    ReactiveFormsModule,
-    MatAutocompleteModule,
-    MatNativeDateModule,
-    MatCheckboxModule,
-    FormsModule,
-    MatSelectModule,
-    MatSlideToggleModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatExpansionModule,
+        NoopAnimationsModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatButtonModule,
+        MatInputModule,
+        MatTabsModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatChipsModule,
+        ReactiveFormsModule,
+        MatAutocompleteModule,
+        MatNativeDateModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatSelectModule,
+        MatSlideToggleModule,
+        MatSortModule,
+        MatStepperModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
